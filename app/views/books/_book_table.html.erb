@@ -9,6 +9,8 @@
     </td>
     <td><%= link_to book.title, book_path(book.id) %></td>
     <td><%= book.body %></td>
+    <%= render "favorites/favorites_button", book: book %>
+
     <% if current_user == book.user %>
       <td><%= link_to "Edit", edit_book_path(book.id), class: "btn btn-sm btn-success" %></td>
       <td><%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "本当に消しますか", class: "btn btn-sm btn-danger" %></td>
