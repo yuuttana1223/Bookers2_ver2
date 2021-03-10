@@ -18,6 +18,7 @@
         </td>
         <td><%= link_to book.title, book_path(book.id) %></td>
         <td><%= book.body %></td>
+        <%= render "favorites/favorites_button", book: book %>
       </tr>
     <% end %>
   </tbody>
