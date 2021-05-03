@@ -9,8 +9,8 @@
     </td>
     <td><%= link_to book.title, book_path(book.id) %></td>
     <td><%= book.body %></td>
-    <%= render "favorites/favorites_button", book: book %>
-    <%= render "book_comments/book_comment_count", book: book %>
+    <td><%= render "favorites/favorites_button", book: book %></td>
+    <td><%= render "book_comments/book_comments_count", book: book %></td>
 
     <% if current_user == book.user %>
       <td><%= link_to "Edit", edit_book_path(book.id), class: "btn btn-sm btn-success" %></td>
