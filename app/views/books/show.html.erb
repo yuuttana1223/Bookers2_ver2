@@ -1,4 +1,4 @@
-<%= render "layouts/error_messages", message: @book %>
+<%= render "layouts/error_messages", message: @book_comment || @book %>
 <div class="row">
   <div class='col-md-3'>
     <%= render "users/user_info", user: @book.user %>
